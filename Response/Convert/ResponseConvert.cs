@@ -1,10 +1,10 @@
 ﻿using Newtonsoft.Json;
 
-namespace BoongGod.Api;
+namespace Redbean.Api;
 
 public class ResponseConvert
 {
-	public static string ToResult<T>(T value, int code = 0)
+	public static string ToJson<T>(T value, int code = 0)
 	{
 		var result = new ResponseResult<T>
 		{
@@ -13,6 +13,11 @@ public class ResponseConvert
 		};
 
 		return JsonConvert.SerializeObject(result, Formatting.Indented);
+	}
+
+	public static ResponseResult<T> ToClass<T>(string response)
+	{
+		return JsonConvert.DeserializeObject<ResponseResult<T>>(response);
 	}
 }
 
