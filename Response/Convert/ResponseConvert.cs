@@ -25,5 +25,13 @@ namespace Redbean.Api
 	{
 		public int StatusCode;
 		public object Result;
+
+		public T Convert<T>()
+		{
+			if (Result is string result)
+				return JsonConvert.DeserializeObject<T>(result);
+
+			return default;
+		}
 	}
 }
