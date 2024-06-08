@@ -9,7 +9,7 @@ namespace Redbean.Api
 			var result = new ResponseResult
 			{
 				StatusCode = code,
-				Result = JsonConvert.SerializeObject(value, Formatting.Indented)
+				Result = value
 			};
 
 			return JsonConvert.SerializeObject(result, Formatting.Indented);
@@ -24,6 +24,6 @@ namespace Redbean.Api
 	public class ResponseResult
 	{
 		public int StatusCode;
-		public string Result;
+		public object Result;
 	}
 }
