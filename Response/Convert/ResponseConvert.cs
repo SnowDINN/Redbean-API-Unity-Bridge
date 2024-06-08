@@ -1,39 +1,29 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Redbean.Api
 {
 	public class ResponseConvert
 	{
-		public static string ToJson<T>(T value, int code = 0)
+		public static string ToJson(object value, int code = 0)
 		{
-			var result = new ResponseResult<T>
+			var result = new ResponseResult
 			{
 				StatusCode = code,
-				Result = value
+				Result = JsonConvert.SerializeObject(value, Formatting.Indented)
 			};
 
 			return JsonConvert.SerializeObject(result, Formatting.Indented);
 		}
 
-		public static ResponseResult<T> ToClass<T>(string response)
+		public static T ToClass<T>(string response)
 		{
-			var json = JObject.Parse(response);
-			var statusCode = json[nameof(ResponseResult<T>.StatusCode)].Value<int>();
-			if (statusCode > 0)
-				return new ResponseResult<T>()
-				{
-					StatusCode = statusCode,
-					Result = default
-				};
-			
-			return JsonConvert.DeserializeObject<ResponseResult<T>>(response);
+			return JsonConvert.DeserializeObject<T>(response);
 		}
 	}
 
-	public class ResponseResult<T>
+	public class ResponseResult
 	{
 		public int StatusCode;
-		public T Result;
+		public string Result;
 	}
 }
