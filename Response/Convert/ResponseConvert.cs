@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Redbean.Api
 {
@@ -17,6 +18,15 @@ namespace Redbean.Api
 
 		public static ResponseResult<T> ToClass<T>(string response)
 		{
+			var json = JObject.Parse(response);
+			var statusCode = json[nameof(ResponseResult<T>.StatusCode)].Value<int>();
+			if (statusCode > 0)
+				return new ResponseResult<T>()
+				{
+					StatusCode = statusCode,
+					Result = default
+				};
+			
 			return JsonConvert.DeserializeObject<ResponseResult<T>>(response);
 		}
 	}
