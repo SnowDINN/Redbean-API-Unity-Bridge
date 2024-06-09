@@ -1,11 +1,5 @@
 ﻿namespace Redbean.Api
 {
-	public enum UserResponseCode
-	{
-		Success,
-		NotFound,
-	}
-	
 	public class UserResponse
 	{
 		public UserInfoModel information;
