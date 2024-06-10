@@ -1,19 +1,28 @@
-﻿namespace Redbean.Api
+﻿using Newtonsoft.Json;
+
+namespace Redbean.Api
 {
 	public class UserResponse
 	{
-		public UserInfoModel information;
-		public UserSocialModel social;
+		[JsonProperty("information")]
+		public UserInfoModel Information;
+		
+		[JsonProperty("social")]
+		public UserSocialModel Social;
 	}
 
 	public class UserInfoModel
 	{
-		public string nickname;
+		[JsonProperty("nickname")]
+		public string Nickname;
 	}
 
 	public class UserSocialModel
 	{
-		public string id;
-		public string platform;
+		[JsonProperty("id")]
+		public string Id;
+		
+		[JsonProperty("platform")]
+		public string Platform;
 	}	
 }

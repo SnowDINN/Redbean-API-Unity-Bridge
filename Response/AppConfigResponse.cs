@@ -16,6 +16,4 @@ namespace Redbean.Api
 		[JsonProperty("version")]
 		public string Version { get; set; } = string.Empty;
 	}
-	
-
 }
