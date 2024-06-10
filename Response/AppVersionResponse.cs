@@ -1,7 +1,8 @@
-﻿namespace Redbean.Api;
-
-public class AppVersionResponse
+﻿namespace Redbean.Api
 {
-	public string BeforeVersion;
-	public string AfterVersion;
+	public class AppVersionResponse
+	{
+		public string BeforeVersion;
+		public string AfterVersion;
+	}	
 }
