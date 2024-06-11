@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Redbean.Api
 {
@@ -6,12 +7,18 @@ namespace Redbean.Api
 	{
 	}
 	
-	public class Response(object value, int code)
+	public class Response
 	{
-		public object Value { get; set; } = value;
-		public int Code { get; set; } = code;
+		public Response(object value, int code)
+		{
+			Value = value;
+			Code = code;
+		}
+		
+		public object Value { get; set; }
+		public int Code { get; set; }
 
-		public T? ToConvert<T>()
+		public T ToConvert<T>()
 		{
 			if (Value is string result)
 				return JsonConvert.DeserializeObject<T>(result);
@@ -34,7 +41,7 @@ namespace Redbean.Api
 		public static string ToJson<T>(this T value, int code = 0) where T : IResponse =>
 			JsonConvert.SerializeObject(new Response(value, code), Formatting.Indented);
 
-		public static T? ToClass<T>(this string response) where T : IResponse =>
+		public static T ToClass<T>(this string response) where T : IResponse =>
 			JsonConvert.DeserializeObject<T>(response);
 	}
 }
