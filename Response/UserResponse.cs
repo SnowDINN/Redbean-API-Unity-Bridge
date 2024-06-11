@@ -2,7 +2,7 @@
 
 namespace Redbean.Api
 {
-	public class UserResponse
+	public class UserResponse : IResponse
 	{
 		[JsonProperty("information")]
 		public UserInfoModel Information;

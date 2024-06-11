@@ -2,7 +2,7 @@
 
 namespace Redbean.Api
 {
-	public class AppConfigResponse
+	public class AppConfigResponse : IResponse
 	{
 		[JsonProperty("android")]
 		public MobileConfig Android { get; set; } = new();
