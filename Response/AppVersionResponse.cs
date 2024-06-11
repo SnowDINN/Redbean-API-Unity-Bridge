@@ -2,7 +2,7 @@
 {
 	public class AppVersionResponse : IResponse
 	{
-		public string BeforeVersion;
-		public string AfterVersion;
+		public string BeforeVersion { get; set; } = "";
+		public string AfterVersion { get; set; } = "";
 	}	
 }
