@@ -41,7 +41,7 @@ namespace Redbean.Api
 		public static string ToJson<T>(this T value, int code = 0) where T : IResponse =>
 			JsonConvert.SerializeObject(new Response(value, code), Formatting.Indented);
 
-		public static T ToClass<T>(this string response) where T : IResponse =>
+		public static T ToConvert<T>(this string response) where T : IResponse =>
 			JsonConvert.DeserializeObject<T>(response);
 	}
 }
