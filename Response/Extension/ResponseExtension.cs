@@ -9,14 +9,14 @@ namespace Redbean.Api
 	
 	public class Response
 	{
-		public Response(object value, int code)
+		public Response(int code, object value)
 		{
-			Value = value;
 			Code = code;
+			Value = value;
 		}
 		
-		public object Value { get; set; }
 		public int Code { get; set; }
+		public object Value { get; set; }
 
 		public T ToConvert<T>()
 		{
@@ -29,19 +29,12 @@ namespace Redbean.Api
 	
 	public static class ResponseExtension
 	{
-		public static string ToJson(this string message, int code = 0) =>
-			JsonConvert.SerializeObject(new Response(message, code), Formatting.Indented);
+		public static Response ToResponse(this string message, ApiErrorType type = 0) => new((int)type, message);
 
-		public static string ToJson<T>(this List<T> message, int code = 0) =>
-			JsonConvert.SerializeObject(new Response(message, code), Formatting.Indented);
+		public static Response ToResponse<T>(this List<T> message, ApiErrorType type = 0) => new((int)type, message);
 
-		public static string ToJson(this IDictionary<string, object> snapshot, int code = 0) =>
-			JsonConvert.SerializeObject(new Response(snapshot, code), Formatting.Indented);
+		public static Response ToResponse(this IDictionary<string, object> snapshot, ApiErrorType type = 0) => new((int)type, snapshot);
 
-		public static string ToJson<T>(this T value, int code = 0) where T : IResponse =>
-			JsonConvert.SerializeObject(new Response(value, code), Formatting.Indented);
-
-		public static T ToConvert<T>(this string response) where T : IResponse =>
-			JsonConvert.DeserializeObject<T>(response);
+		public static Response ToResponse<T>(this T value, ApiErrorType type = 0) where T : IResponse => new((int)type, value);
 	}
 }
