@@ -3,6 +3,8 @@ using Redbean.Api;
 
 namespace Redbean.MVP.Content
 {
+#region TableConfig
+
 	public class TableConfigResponse : IResponse
 	{
 		[JsonProperty("client")]
@@ -26,4 +28,6 @@ namespace Redbean.MVP.Content
 		[JsonProperty("id")]
 		public string Id { get; set; } = string.Empty;
 	}
+
+#endregion
 }

@@ -2,6 +2,8 @@
 
 namespace Redbean.Api
 {
+#region AppConfig
+
 	public class AppConfigResponse : IResponse
 	{
 		[JsonProperty("android")]
@@ -16,4 +18,16 @@ namespace Redbean.Api
 		[JsonProperty("version")]
 		public string Version { get; set; } = string.Empty;
 	}
+
+#endregion
+
+#region AppVersion
+
+	public class AppVersionResponse : IResponse
+	{
+		public string BeforeVersion { get; set; } = "";
+		public string AfterVersion { get; set; } = "";
+	}	
+
+#endregion
 }

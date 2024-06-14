@@ -6,9 +6,4 @@
 		Android,
 		iOS
 	}
-	
-	public class Define
-	{
-		
-	}
 }
