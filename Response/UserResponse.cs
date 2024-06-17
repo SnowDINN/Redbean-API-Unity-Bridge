@@ -5,24 +5,24 @@ namespace Redbean.Api
 	public class UserResponse : IResponse
 	{
 		[JsonProperty("information")]
-		public UserInfo Information { get; set; } = new();
+		public UserInfo Information = new();
 
 		[JsonProperty("social")]
-		public UserSocial Social { get; set; } = new();
+		public UserSocial Social = new();
 	}
 
 	public class UserInfo
 	{
 		[JsonProperty("nickname")]
-		public string Nickname { get; set; } = "";
+		public string Nickname = "";
 	}
 
 	public class UserSocial
 	{
 		[JsonProperty("id")]
-		public string Id { get; set; } = "";
+		public string Id = "";
 		
 		[JsonProperty("platform")]
-		public string Platform { get; set; } = "";
+		public string Platform = "";
 	}	
 }

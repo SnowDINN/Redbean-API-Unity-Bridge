@@ -8,25 +8,25 @@ namespace Redbean.MVP.Content
 	public class TableConfigResponse : IResponse
 	{
 		[JsonProperty("client")]
-		public TableClientConfig Client { get; set; } = new();
+		public TableClientConfig Client = new();
 		
 		[JsonProperty("sheet")]
-		public TableSheetConfig Sheet { get; set; } = new();
+		public TableSheetConfig Sheet = new();
 	}
 	
 	public class TableClientConfig
 	{
 		[JsonProperty("id")]
-		public string Id { get; set; } = string.Empty;
+		public string Id = string.Empty;
 		
 		[JsonProperty("secret")]
-		public string Secret { get; set; } = string.Empty;
+		public string Secret = string.Empty;
 	}
 	
 	public class TableSheetConfig
 	{
 		[JsonProperty("id")]
-		public string Id { get; set; } = string.Empty;
+		public string Id = string.Empty;
 	}
 
 #endregion
