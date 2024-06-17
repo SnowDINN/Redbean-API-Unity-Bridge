@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Redbean.Cryptography
+namespace Redbean.Api
 {
 	public class AES128
 	{
