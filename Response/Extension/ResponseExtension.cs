@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿#pragma warning disable CS8603
+#pragma warning disable CS8618
+
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace Redbean.Api
