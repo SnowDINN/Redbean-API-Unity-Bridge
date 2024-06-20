@@ -14,7 +14,10 @@ namespace Redbean.Api
 	{
 		private static readonly Response Default = new();
 		
+		[JsonProperty("code")]
 		public int Code { get; set; }
+		
+		[JsonProperty("value")]
 		public object Value { get; set; }
 
 		public static Response Return(int code, object value)
