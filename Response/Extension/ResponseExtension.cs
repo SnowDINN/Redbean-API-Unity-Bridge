@@ -1,7 +1,4 @@
-﻿#pragma warning disable CS8603
-#pragma warning disable CS8618
-
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace Redbean.Api
 {
