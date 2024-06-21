@@ -2,7 +2,6 @@
 
 namespace Redbean.Api
 {
-	[Serializable]
 	public class UserResponse : IResponse
 	{
 		[JsonProperty("information")]
@@ -11,15 +10,13 @@ namespace Redbean.Api
 		[JsonProperty("social")]
 		public UserSocial Social = new();
 	}
-
-	[Serializable]
+	
 	public class UserInfo
 	{
 		[JsonProperty("nickname")]
 		public string Nickname = "";
 	}
-
-	[Serializable]
+	
 	public class UserSocial
 	{
 		[JsonProperty("id")]
