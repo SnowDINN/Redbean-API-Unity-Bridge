@@ -2,6 +2,7 @@
 #pragma warning disable CS8618
 
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
 namespace Redbean.Api
@@ -35,16 +36,5 @@ namespace Redbean.Api
 
 			return default;
 		}
-	}
-	
-	public static class ResponseExtension
-	{
-		public static Response ToResponse(this string message, ApiErrorType type = 0) => Response.Return((int)type, message);
-
-		public static Response ToResponse<T>(this List<T> message, ApiErrorType type = 0) => Response.Return((int)type, message);
-
-		public static Response ToResponse(this IDictionary<string, object> snapshot, ApiErrorType type = 0) => Response.Return((int)type, snapshot);
-
-		public static Response ToResponse<T>(this T value, ApiErrorType type = 0) where T : IResponse => Response.Return((int)type, value);
 	}
 }

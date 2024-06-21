@@ -4,9 +4,9 @@ namespace Redbean.Api
 {
 	public class TokenResponse : IResponse
 	{
-		public DateTime AccessTokenExpire { get; set; } = DateTime.UtcNow;
-		public DateTime RefreshTokenExpire { get; set; } = DateTime.UtcNow;
-		public string AccessToken { get; set; } = "";
-		public string RefreshToken { get; set; } = "";
+		public DateTime AccessTokenExpire = DateTime.UtcNow;
+		public DateTime RefreshTokenExpire = DateTime.UtcNow;
+		public string AccessToken = "";
+		public string RefreshToken = "";
 	}	
 }
