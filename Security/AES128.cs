@@ -30,7 +30,7 @@ namespace Redbean.Api
 			}
 		}
 
-		public string Encrypt(string text)
+		public string Encryption(string text)
 		{
 			var sourceArray = Encoding.UTF8.GetBytes(key);
 			var keyBytes = new byte[16];
@@ -49,7 +49,7 @@ namespace Redbean.Api
 			return Convert.ToBase64String(encryptor.TransformFinalBlock(buffer, 0, buffer.Length));
 		}
 
-		public string Decrypt(string text)
+		public string Decryption(string text)
 		{
 			var fromBase64String = Convert.FromBase64String(text);
 			var sourceArray = Encoding.UTF8.GetBytes(key);
