@@ -1,4 +1,7 @@
-﻿namespace Redbean.Api
+﻿using System;
+using System.Collections.Generic;
+
+namespace Redbean.Api
 {
 	public class StringResponse : Response
 	{
