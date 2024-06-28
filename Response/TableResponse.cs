@@ -5,7 +5,7 @@ namespace Redbean.MVP.Content
 {
 #region TableConfig
 
-	public class TableConfigResponse : IResponse
+	public class TableConfigResponse : Response
 	{
 		[JsonProperty("client")]
 		public TableClientConfig Client = new();

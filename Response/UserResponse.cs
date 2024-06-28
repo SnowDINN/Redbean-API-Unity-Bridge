@@ -2,7 +2,7 @@
 
 namespace Redbean.Api
 {
-	public class UserResponse : IResponse
+	public class UserResponse : Response
 	{
 		[JsonProperty("information")]
 		public UserInfo Information = new();
@@ -14,15 +14,15 @@ namespace Redbean.Api
 	public class UserInfo
 	{
 		[JsonProperty("nickname")]
-		public string Nickname = "";
+		public string Nickname = string.Empty;
 	}
 	
 	public class UserSocial
 	{
 		[JsonProperty("id")]
-		public string Id = "";
+		public string Id = string.Empty;
 		
 		[JsonProperty("platform")]
-		public string Platform = "";
+		public string Platform = string.Empty;
 	}	
 }

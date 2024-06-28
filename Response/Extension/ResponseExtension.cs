@@ -1,35 +1,12 @@
-﻿using Newtonsoft.Json;
-
-namespace Redbean.Api
+﻿namespace Redbean.Api
 {
 	public interface IResponse
 	{
+		int ErrorCode { get; set; }
 	}
 	
-	public class Response
+	public class Response : IResponse
 	{
-		private static readonly Response Default = new();
-		
-		[JsonProperty("code")]
-		public int Code { get; set; }
-		
-		[JsonProperty("value")]
-		public object Value { get; set; }
-
-		public static Response Return(int code, object value)
-		{
-			Default.Code = code;
-			Default.Value = value;
-
-			return Default;
-		}
-		
-		public T ToConvert<T>()
-		{
-			if (Value is string result)
-				return JsonConvert.DeserializeObject<T>(result);
-
-			return default;
-		}
+		public int ErrorCode { get; set; }
 	}
 }
