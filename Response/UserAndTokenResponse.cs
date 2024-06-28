@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace Redbean.Api
 {
-	public class UserAndTokenResponse : Response
+	public class UserAndTokenResponse : Response<UserAndTokenResponse>
 	{
 		[JsonProperty("information")]
 		public UserInfo Information = new();

@@ -3,23 +3,47 @@ using System.Collections.Generic;
 
 namespace Redbean.Api
 {
-	public class StringResponse : Response
+	public class StringResponse : Response<StringResponse>
 	{
-		public StringResponse(string value) => Value = value;
+		public StringResponse()
+		{
+			
+		}
+
+		public StringResponse(string value)
+		{
+			Value = value;
+		}
 		
 		public string Value = string.Empty;
 	}
 	
-	public class StringArrayResponse : Response
+	public class StringArrayResponse : Response<StringArrayResponse>
 	{
-		public StringArrayResponse(IEnumerable<string> value) => Value = value;
+		public StringArrayResponse()
+		{
+			
+		}
+		
+		public StringArrayResponse(IEnumerable<string> value)
+		{
+			Value = value;
+		}
 		
 		public IEnumerable<string> Value = Array.Empty<string>();
 	}
 	
-	public class DictionaryResponse : Response
+	public class DictionaryResponse : Response<DictionaryResponse>
 	{
-		public DictionaryResponse(Dictionary<string, object> value) => Value = value;
+		public DictionaryResponse()
+		{
+			
+		}
+		
+		public DictionaryResponse(Dictionary<string, object> value)
+		{
+			Value = value;
+		}
 		
 		public Dictionary<string, object> Value = new();
 	}	
