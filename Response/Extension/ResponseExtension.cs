@@ -1,4 +1,6 @@
-﻿namespace Redbean.Api
+﻿using Newtonsoft.Json;
+
+namespace Redbean.Api
 {
 	public interface IResponse
 	{
@@ -7,6 +9,7 @@
 	
 	public class Response : IResponse
 	{
+		[JsonProperty("errorCode", Order = 1)]
 		public int ErrorCode { get; set; }
 	}
 }

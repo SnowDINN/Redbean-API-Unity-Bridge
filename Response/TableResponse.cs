@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
-using Redbean.Api;
 
-namespace Redbean.MVP.Content
+namespace Redbean.Api
 {
 #region TableConfig
 
