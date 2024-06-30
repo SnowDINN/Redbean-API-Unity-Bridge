@@ -1,13 +1,16 @@
-﻿namespace Redbean.Api;
+﻿using System;
 
-public class AppUploadFilesRequest : Request
+namespace Redbean.Api
 {
-	public MobileType Type = MobileType.None;
-	public RequestFile[] Files { get; set; }
-}
+	public class AppUploadFilesRequest : Request
+	{
+		public MobileType Type = MobileType.None;
+		public RequestFile[] Files = Array.Empty<RequestFile>();
+	}
 
-public class RequestFile
-{
-	public string FileName;
-	public byte[] FileData;
+	public class RequestFile
+	{
+		public string FileName;
+		public byte[] FileData;
+	}	
 }
