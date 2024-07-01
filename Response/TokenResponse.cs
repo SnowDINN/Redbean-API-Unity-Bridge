@@ -2,7 +2,7 @@
 
 namespace Redbean.Api
 {
-	public class TokenResponse : IHttpResponse
+	public class TokenResponse : IApiResponse
 	{
 		public string AccessToken = "";
 		public string RefreshToken = "";

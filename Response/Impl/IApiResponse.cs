@@ -1,6 +1,6 @@
 ﻿namespace Redbean.Api
 {
-	public interface IHttpResponse
+	public interface IApiResponse
 	{
 	}
 }
