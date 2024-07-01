@@ -23,9 +23,9 @@ namespace Redbean.Api
 		
 		[JsonProperty("sheet")]
 		public TableSheetConfig Sheet = new();
-		
-		[JsonProperty("updateTime")]
-		public string UpdateTime = $"{DateTime.UtcNow}";
+
+		[JsonProperty("update")]
+		public TableUpdateConfig Update = new();
 	}
 	
 	public class TableClientConfig
@@ -41,6 +41,12 @@ namespace Redbean.Api
 	{
 		[JsonProperty("id")]
 		public string Id = string.Empty;
+	}
+	
+	public class TableUpdateConfig
+	{
+		[JsonProperty("updateTime")]
+		public string UpdateTime = $"{DateTime.UtcNow}";
 	}
 
 #endregion
