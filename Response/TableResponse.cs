@@ -1,7 +1,18 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Redbean.Api
 {
+#region Table
+
+	public class TableResponse : IApiResponse
+	{
+		[JsonProperty("table")]
+		public Dictionary<string, object> Table = new();
+	}	
+
+#endregion
+	
 #region TableConfig
 
 	public class TableConfigResponse : IApiResponse

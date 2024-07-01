@@ -32,19 +32,4 @@ namespace Redbean.Api
 		
 		public IEnumerable<string> Value = Array.Empty<string>();
 	}
-	
-	public class DictionaryResponse : IApiResponse
-	{
-		public DictionaryResponse()
-		{
-			
-		}
-		
-		public DictionaryResponse(Dictionary<string, object> value)
-		{
-			Value = value;
-		}
-		
-		public Dictionary<string, object> Value = new();
-	}	
 }

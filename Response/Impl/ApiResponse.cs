@@ -14,7 +14,7 @@ namespace Redbean.Api
 		public object Response { get; set; }
 	}
 	
-	public class HttpResponse<T> : IApiResponse
+	public class ApiResponse<T> : IApiResponse
 	{
 		[JsonProperty("errorCode")]
 		public int ErrorCode { get; set; }
