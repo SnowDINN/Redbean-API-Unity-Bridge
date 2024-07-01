@@ -9,7 +9,7 @@ namespace Redbean.Api
 	public class TableResponse : IApiResponse
 	{
 		[JsonProperty("table")]
-		public Dictionary<string, object> Table = new();
+		public Dictionary<string, string> Table = new();
 	}	
 
 #endregion
