@@ -8,7 +8,7 @@ namespace Redbean.Api
 	{
 		public string Contents = string.Empty;
 		public DateTime StartTime = DateTime.UtcNow;
-		public DateTime EndTime = DateTime.UtcNow;
+		public TimeSpan EndTime = TimeSpan.Zero;
 	}
 
 #endregion
