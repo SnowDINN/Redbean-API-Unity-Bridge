@@ -2,24 +2,24 @@
 
 namespace Redbean.Api
 {
-	public class Response : IResponse
+	public class HttpResponse : IHttpResponse
 	{
 		[JsonIgnore]
-		public static Response Default { get; set; } = new();
+		public static HttpResponse Default { get; set; } = new();
 		
 		[JsonProperty("errorCode")]
 		public int ErrorCode { get; set; }
 
 		[JsonProperty("response")]
-		public object Value { get; set; }
+		public object Response { get; set; }
 	}
 	
-	public class Response<T> : IResponse
+	public class HttpResponse<T> : IHttpResponse
 	{
 		[JsonProperty("errorCode")]
 		public int ErrorCode { get; set; }
 
 		[JsonProperty("response")]
-		public T Value { get; set; }
+		public T Response { get; set; }
 	}
 }

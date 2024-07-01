@@ -4,7 +4,7 @@ namespace Redbean.Api
 {
 #region AppConfig
 	
-	public class AppConfigResponse : IResponse
+	public class AppConfigResponse : IHttpResponse
 	{
 		[JsonProperty("android")]
 		public MobileConfig Android = new();
@@ -23,7 +23,7 @@ namespace Redbean.Api
 
 #region AppVersion
 
-	public class AppVersionResponse : IResponse
+	public class AppVersionResponse : IHttpResponse
 	{
 		public string BeforeVersion = string.Empty;
 		public string AfterVersion = string.Empty;

@@ -4,7 +4,7 @@ namespace Redbean.Api
 {
 #region TableConfig
 
-	public class TableConfigResponse : IResponse
+	public class TableConfigResponse : IHttpResponse
 	{
 		[JsonProperty("client")]
 		public TableClientConfig Client = new();

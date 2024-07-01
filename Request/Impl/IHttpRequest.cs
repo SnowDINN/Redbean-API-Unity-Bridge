@@ -1,6 +1,6 @@
 ﻿namespace Redbean.Api
 {
-	public interface IRequest
+	public interface IHttpRequest
 	{
 	}
 }

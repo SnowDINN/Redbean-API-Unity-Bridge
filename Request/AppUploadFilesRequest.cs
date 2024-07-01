@@ -2,7 +2,7 @@
 
 namespace Redbean.Api
 {
-	public class AppUploadFilesRequest : Request
+	public class AppUploadFilesRequest : HttpRequest
 	{
 		public MobileType Type = MobileType.None;
 		public RequestFile[] Files = Array.Empty<RequestFile>();
