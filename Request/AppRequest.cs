@@ -7,8 +7,8 @@ namespace Redbean.Api
 	public class AppMaintenanceRequest : IApiRequest
 	{
 		public string Contents = string.Empty;
-		public DateTime StartTime = DateTime.UtcNow;
-		public TimeSpan EndTime = TimeSpan.Zero;
+		public DateTime StartTime = DateTime.Today;
+		public DateTime EndTime = DateTime.Today;
 	}
 
 #endregion
