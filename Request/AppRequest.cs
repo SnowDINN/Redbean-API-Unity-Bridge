@@ -1,4 +1,6 @@
-﻿namespace Redbean.Api
+﻿using System;
+
+namespace Redbean.Api
 {
 #region Maintenance
 
