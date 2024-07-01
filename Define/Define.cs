@@ -1,11 +1,5 @@
 ﻿namespace Redbean.Api
 {
-	public enum RequestType
-	{
-		Json,
-		MultiPart
-	}
-	
 	public enum ApiErrorType
 	{
 		Success,
