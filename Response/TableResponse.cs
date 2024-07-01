@@ -25,7 +25,7 @@ namespace Redbean.Api
 		public TableSheetConfig Sheet = new();
 		
 		[JsonProperty("updateTime")]
-		public DateTime UpdateTime = DateTime.UtcNow;
+		public string UpdateTime = $"{DateTime.UtcNow}";
 	}
 	
 	public class TableClientConfig
