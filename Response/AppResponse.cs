@@ -6,17 +6,17 @@ namespace Redbean.Api
 	
 	public class AppConfigResponse : IApiResponse
 	{
-		[JsonProperty("android")]
-		public MobileConfig Android = new();
-
-		[JsonProperty("ios")]
-		public MobileConfig iOS = new();
+		[JsonProperty("version")]
+		public VersionConfig Version = new();
 	}
 	
-	public class MobileConfig
+	public class VersionConfig
 	{
-		[JsonProperty("version")]
-		public string Version = string.Empty;
+		[JsonProperty("aos_version")]
+		public string AndroidVersion = string.Empty;
+		
+		[JsonProperty("ios_version")]
+		public string iOSVersion = string.Empty;
 	}
 
 #endregion
