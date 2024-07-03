@@ -25,6 +25,9 @@ namespace Redbean.Api
 	
 	public class UserSocial
 	{
+		[JsonProperty("profile")]
+		public string Profile = string.Empty;
+		
 		[JsonProperty("platform")]
 		public string Platform = string.Empty;
 	}
