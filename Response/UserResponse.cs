@@ -5,13 +5,16 @@ namespace Redbean.Api
 	public class UserResponse : IApiResponse
 	{
 		[JsonProperty("information")]
-		public UserInfo Information = new();
+		public UserInformation Information = new();
 
 		[JsonProperty("social")]
 		public UserSocial Social = new();
+
+		[JsonProperty("log")]
+		public UserLog Log = new();
 	}
 	
-	public class UserInfo
+	public class UserInformation
 	{
 		[JsonProperty("nickname")]
 		public string Nickname = string.Empty;
@@ -24,5 +27,14 @@ namespace Redbean.Api
 		
 		[JsonProperty("platform")]
 		public string Platform = string.Empty;
-	}	
+	}
+
+	public class UserLog
+	{
+		[JsonProperty("lastConnected")]
+		public string LastConnected = string.Empty;
+		
+		[JsonProperty("lastPurchased")]
+		public string LastPurchased = string.Empty;
+	}
 }

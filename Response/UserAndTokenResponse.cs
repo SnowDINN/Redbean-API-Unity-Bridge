@@ -5,15 +5,10 @@ namespace Redbean.Api
 {
 	public class UserAndTokenResponse : IApiResponse
 	{
-		[JsonProperty("information")]
-		public UserInfo Information = new();
+		[JsonProperty("user")]
+		public UserResponse User = new();
 
-		[JsonProperty("social")]
-		public UserSocial Social = new();
-	
-		public string AccessToken = string.Empty;
-		public string RefreshToken = string.Empty;
-		public DateTime AccessTokenExpire = DateTime.UtcNow;
-		public DateTime RefreshTokenExpire = DateTime.UtcNow;
+		[JsonProperty("token")]
+		public TokenResponse Token = new();
 	}	
 }

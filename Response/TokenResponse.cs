@@ -6,7 +6,7 @@ namespace Redbean.Api
 	{
 		public string AccessToken = "";
 		public string RefreshToken = "";
-		public DateTime AccessTokenExpire = DateTime.UtcNow;
-		public DateTime RefreshTokenExpire = DateTime.UtcNow;
+		public DateTime AccessTokenExpire = new();
+		public DateTime RefreshTokenExpire = new();
 	}	
 }
