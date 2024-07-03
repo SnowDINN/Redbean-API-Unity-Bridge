@@ -41,14 +41,4 @@ namespace Redbean.Api
 	}
 
 #endregion
-
-#region AppVersion
-
-	public class AppVersionResponse : IApiResponse
-	{
-		public string BeforeVersion = string.Empty;
-		public string AfterVersion = string.Empty;
-	}	
-
-#endregion
 }
