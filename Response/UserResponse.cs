@@ -16,15 +16,15 @@ namespace Redbean.Api
 	
 	public class UserInformation
 	{
+		[JsonProperty("id")]
+		public string Id = string.Empty;
+		
 		[JsonProperty("nickname")]
 		public string Nickname = string.Empty;
 	}
 	
 	public class UserSocial
 	{
-		[JsonProperty("id")]
-		public string Id = string.Empty;
-		
 		[JsonProperty("platform")]
 		public string Platform = string.Empty;
 	}
