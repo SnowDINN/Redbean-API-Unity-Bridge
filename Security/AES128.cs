@@ -6,7 +6,7 @@ namespace Redbean.Api
 {
 	public class AES128
 	{
-		private const string SecurityKey = "redbean.boongsin";
+		private const string SecurityKey = "redbean.boongsin.api.network";
 		
 		private readonly Aes Aes;
 
