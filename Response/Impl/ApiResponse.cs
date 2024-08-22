@@ -17,9 +17,9 @@ namespace Redbean.Api
 	public class ApiResponse<T> : IApiResponse where T : new()
 	{
 		[JsonProperty("errorCode")]
-		public int ErrorCode { get; set; }
+		public int ErrorCode { get; set; } = -1;
 
 		[JsonProperty("response")]
-		public T Response { get; set; } = new T();
+		public T Response { get; set; } = new();
 	}
 }
