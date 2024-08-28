@@ -14,12 +14,12 @@ namespace Redbean.Api
 		public object Response { get; set; }
 	}
 	
-	public class ApiResponse<T> : IApiResponse where T : new()
+	public class ApiResponse<T> : IApiResponse
 	{
 		[JsonProperty("errorCode")]
-		public int ErrorCode { get; set; } = -1;
+		public int ErrorCode { get; set; }
 
 		[JsonProperty("response")]
-		public T Response { get; set; } = new();
+		public T Response { get; set; }
 	}
 }
