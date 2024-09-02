@@ -19,6 +19,9 @@ namespace Redbean.Api
 	
 	public class UserInformation
 	{
+		[JsonProperty("id")]
+		public string Id = string.Empty;
+		
 		[JsonProperty("nickname")]
 		public string Nickname = string.Empty;
 		
@@ -28,9 +31,6 @@ namespace Redbean.Api
 	
 	public class UserSocial
 	{
-		[JsonProperty("id")]
-		public string Id = string.Empty;
-		
 		[JsonProperty("profile")]
 		public string Profile = string.Empty;
 		
