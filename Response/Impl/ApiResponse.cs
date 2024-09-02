@@ -8,18 +8,18 @@ namespace Redbean.Api
 		public static ApiResponse Default { get; set; } = new();
 		
 		[JsonProperty("errorCode")]
-		public int ErrorCode { get; set; }
+		public int ErrorCode { get; set; } = -1;
 
 		[JsonProperty("response")]
-		public object Response { get; set; }
+		public object Response { get; set; } = new();
 	}
 	
-	public class ApiResponse<T> : IApiResponse
+	public class ApiResponse<T> : IApiResponse where T : new()
 	{
 		[JsonProperty("errorCode")]
-		public int ErrorCode { get; set; }
+		public int ErrorCode { get; set; } = -1;
 
 		[JsonProperty("response")]
-		public T Response { get; set; }
+		public T Response { get; set; } = new();
 	}
 }
