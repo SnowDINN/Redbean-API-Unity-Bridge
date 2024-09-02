@@ -4,7 +4,7 @@ namespace Redbean.Api
 {
 #region Maintenance
 
-	public class AppMaintenanceRequest : IApiRequest
+	public class AppMaintenanceRequest : ApiRequest
 	{
 		public string Contents = string.Empty;
 		public DateTime StartTime = DateTime.Today;
@@ -15,7 +15,7 @@ namespace Redbean.Api
 
 #region Version
 
-	public class AppVersionRequest : IApiRequest
+	public class AppVersionRequest : ApiRequest
 	{
 		public MobileType Type = MobileType.None;
 		public string Version = string.Empty;
@@ -25,7 +25,7 @@ namespace Redbean.Api
 	
 #region Upload Files
 	
-	public class AppUploadFilesRequest : IApiRequest
+	public class AppUploadFilesRequest : ApiRequest
 	{
 		public MobileType Type = MobileType.None;
 		public RequestFile[] Files = Array.Empty<RequestFile>();

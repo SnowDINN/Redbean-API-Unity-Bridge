@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Redbean.Api
 {
-	public class StringResponse : IApiResponse
+	public class StringResponse : ApiResponse
 	{
 		public StringResponse()
 		{
@@ -18,7 +18,7 @@ namespace Redbean.Api
 		public string Value = string.Empty;
 	}
 	
-	public class StringArrayResponse : IApiResponse
+	public class StringArrayResponse : ApiResponse
 	{
 		public StringArrayResponse()
 		{
