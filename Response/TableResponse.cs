@@ -6,7 +6,7 @@ namespace Redbean.Api
 {
 #region Table
 
-	public class TableResponse : ApiResponse
+	public class TableResponse : IApiResponse
 	{
 		[JsonProperty("table")]
 		public Dictionary<string, string> Table = new();
@@ -16,7 +16,7 @@ namespace Redbean.Api
 	
 #region TableConfig
 
-	public class TableConfigResponse : ApiResponse
+	public class TableConfigResponse : IApiResponse
 	{
 		[JsonProperty("client")]
 		public TableClientConfig Client = new();

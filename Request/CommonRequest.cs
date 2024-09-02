@@ -1,6 +1,6 @@
 ﻿namespace Redbean.Api
 {
-	public class StringRequest : ApiRequest
+	public class StringRequest : IApiRequest
 	{
 		public StringRequest()
 		{

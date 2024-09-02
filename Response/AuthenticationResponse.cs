@@ -5,7 +5,7 @@ namespace Redbean.Api
 {
 #region User
 
-	public class UserResponse : ApiResponse
+	public class UserResponse : IApiResponse
 	{
 		[JsonProperty("information")]
 		public UserInformation Information = new();
@@ -51,7 +51,7 @@ namespace Redbean.Api
 
 #region Token
 
-	public class TokenResponse : ApiResponse
+	public class TokenResponse : IApiResponse
 	{
 		public string AccessToken = "";
 		public string RefreshToken = "";
@@ -61,7 +61,7 @@ namespace Redbean.Api
 
 #endregion
 	
-	public class UserAndTokenResponse : ApiResponse
+	public class UserAndTokenResponse : IApiResponse
 	{
 		[JsonProperty("user")]
 		public UserResponse User = new();
