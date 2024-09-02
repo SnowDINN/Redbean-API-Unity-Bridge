@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Redbean.Api
 {
@@ -11,12 +12,12 @@ namespace Redbean.Api
 		public int ErrorCode { get; set; } = -1;
 
 		[JsonProperty("response")]
-		public object RawResponse { get; set; } = new();
+		public JObject RawResponse { get; set; } = new();
 	}
 	
-	public class ApiResponse<T> : ApiResponse where T : class
+	public class ApiResponse<T> : ApiResponse
 	{
 		[JsonIgnore]
-		public T Response => RawResponse as T;
+		public T Response => RawResponse.Value<T>();
 	}
 }
