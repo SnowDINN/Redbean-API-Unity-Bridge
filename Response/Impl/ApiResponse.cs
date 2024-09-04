@@ -11,7 +11,7 @@ namespace Redbean.Api
 		public object RawResponse { get; set; } = new();
 
 		[JsonIgnore]
-		public bool isSuccess => ErrorCode == 0;
+		public bool IsSuccess => ErrorCode == 0;
 	}
 	
 	public class ApiResponse<T> : ApiResponse
