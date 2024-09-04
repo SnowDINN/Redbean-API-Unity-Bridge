@@ -3,6 +3,11 @@ using System.Collections.Generic;
 
 namespace Redbean.Api
 {
+	public class EmptyResponse : IApiResponse
+	{
+		
+	}
+	
 	public class StringResponse : IApiResponse
 	{
 		public StringResponse()
