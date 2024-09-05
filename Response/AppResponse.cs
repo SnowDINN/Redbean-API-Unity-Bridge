@@ -4,7 +4,7 @@ namespace Redbean.Api
 {
 #region AppConfig
 	
-	public class AppConfigResponse : IApiResponse
+	public class AppSettingResponse : IApiResponse
 	{
 		[JsonProperty("maintenance")]
 		public AppMaintenanceConfig Maintenance = new();
