@@ -2,7 +2,7 @@
 
 namespace Redbean.Api
 {
-#region AppConfig
+#region AppSetting
 	
 	public class AppSettingResponse : IApiResponse
 	{

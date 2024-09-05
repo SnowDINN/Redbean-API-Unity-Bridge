@@ -14,7 +14,7 @@ namespace Redbean.Api
 
 #endregion
 	
-#region TableConfig
+#region TableSetting
 
 	public class TableAccessKeyResponse : IApiResponse
 	{
